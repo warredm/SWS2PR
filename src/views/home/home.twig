@@ -1,0 +1,81 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'struttura' %}
+
+{# set the css file in the parent tpl #}
+{% set cssFile = 'home' %}
+
+{% block pageContent %}
+<div id="homeContent">
+    <div id="filterForm" class="clearfix">
+        <form action="{{ app.request.baseUrl }}/" method="post" {{ form_enctype(searchform) }} novalidate="novalidate">{# disable HTML5 formchecking #}
+            {{ form_errors(searchform) }}
+            {{ form_widget(searchform) }}
+            <input type="submit" id="btnOk" name="submit" value="Zoek"/>
+        </form>
+    </div>
+        
+    <div id="recent" class="clearfix">
+        <h2>Recentst toegevoegd</h2>
+        {% for recent in recentProperties %}
+        <div class="clearfix">
+            <h3><a href="{{ app.request.baseUrl }}/properties/{{ recent.properties_id }}">
+            {{ recent.type }}
+                {% if recent.buyRent == "buy" %}
+                     te koop
+                {% else %}
+                     te huur
+                {% endif %}
+            </a></h3>
+            <img src="../resources/pictures/{{ recent.pictures }}/1.jpg" />
+            <p id="price">&euro; {{ recent.price }}</p>
+            <dl id="specs" class="clearfix">
+                <dt id="location">Locatie: </dt>
+                <dd>{{ recent.city }}</dd>
+                <dt id="year">Bouwjaar: </dt>
+                <dd>{{ recent.bouwjaar }}</dd>
+                <dt id="acreage">Opp.: </dt>
+                <dd>{{ recent.acreage }} m²</dd>
+                <dt id="bedroooms">Slpk: </dt>
+                <dd>{{ recent.bedrooms }}</dd>
+            </dl>
+        </div>
+        {% endfor %}
+    </div>
+        
+    {% if results %}
+    <div id="results" class="clearfix">
+        <h2>Zoekresultaten</h2>
+        {% for result in results %}
+                {% if result.price < maxprijs %}
+                <div id="property">
+                    <h3><a href="{{ app.request.baseUrl }}/properties/{{ result.properties_id }}">
+                    {{ result.type }}
+                        {% if result.buyRent == "buy" %}
+                             te koop
+                        {% else %}
+                             te huur
+                        {% endif %}
+                    </a></h3>
+                    <p id="price">&euro; {{ result.price }}</p>
+                    <img src="../resources/pictures/{{ result.pictures }}/1.jpg" />
+                    <dl id="list">
+                        <dt id="location">Locatie: </dt>
+                        <dd>{{ result.city }}</dd>
+                        <dt id="year">Bouwjaar: </dt>
+                        <dd>{{ result.bouwjaar }}</dd>
+                        <dt id="acreage">Opp.: </dt>
+                        <dd>{{ result.acreage }} m²</dd>
+                        <dt id="bedroooms">Slpk: </dt>
+                        <dd>{{ result.bedrooms }}</dd>
+                    </dl>
+                </div>
+                {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

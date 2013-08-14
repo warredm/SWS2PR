@@ -1,0 +1,44 @@
+div#loginContent {
+    width: 420px;
+    margin: auto;
+}
+
+div#form div label {
+    float: left;
+    width: 190px;
+    margin: 5px 10px 0 0;
+}
+
+div#form div input {
+    margin: 5px;
+    float: left;
+    width: 200px;
+}
+
+textarea#form_Omschrijving {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+input#btnOk {
+    float: right;
+    margin: 5px 7px;
+}
+
+div#form_KopenHuren {
+    float: left;
+    width: 200px;
+    margin: 10px;
+}
+
+div#form div div#form_KopenHuren input {
+    float: left;
+    width: 20px;
+}
+
+div#form div div#form_KopenHuren label {
+    float: left;
+    width: 150px;
+    margin: 2px 0;
+}

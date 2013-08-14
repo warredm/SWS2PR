@@ -1,0 +1,105 @@
+ /* ---------- CLEARFIX ---------- */
+ .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.ie6 .clearfix {
+    display: inline-block;
+}
+
+.ie7 .clearfix {
+    zoom: 1;
+}
+
+/* ---------- BODY ---------- */
+ * {
+     font-family: sans-serif;
+     color: black;
+ }
+ 
+ img {
+     width: 150px;
+ }
+ 
+ div#siteWrapper {
+     width: 1000px;
+     margin: auto;
+ }
+ 
+ a {
+     color: black;
+     text-decoration: none;
+ }
+ 
+ a:hover {
+     color: white;
+ }
+ 
+ /* ---------- HEADER ---------- */
+ h1 a {
+    display: block;
+    width: 1000px;
+    text-indent: -9999px;
+    overflow: hidden;
+ }
+ 
+ div#header {
+     background: transparent url(../img/header.jpg) no-repeat 0 0;
+     height: 300px;
+ }
+ 
+ div#header ul {
+     position: relative;
+     top: 143px;
+     left: 140px;
+ }
+ 
+ div#header ul li a{
+     float: left;
+     padding: 8px 20px 10px;
+     margin: 0 25px;
+     font-weight: bold;
+     font-size: 16px;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ div#header ul li a:hover {
+     background-color: #272e76;
+ }
+ 
+ div#header ul li a.selected {
+     background-color: #272e76;
+ }
+ 
+ /* ---------- CONTENT ---------- */
+ div#content {
+     background: transparent url(../img/sides.jpg) repeat 0 0;
+ }
+ 
+ div#content section {
+     width: 800px;
+     margin: auto;
+ }
+ 
+ /* ---------- FOOTER ---------- */
+ div#footer {
+    display: block;
+    width: 1000px;
+    overflow: hidden;
+    background: transparent url(../img/footer.jpg) no-repeat 0 0;
+    height: 150px;
+ }
+ 
+ div#footer p {
+     float: left;
+     position: relative;
+     left: 370px;
+     color: white;
+     font-size: 12px;
+     margin-top: 100px;
+ }

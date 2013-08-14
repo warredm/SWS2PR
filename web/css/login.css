@@ -1,0 +1,41 @@
+div#content section h2 {
+    font-size: 26px;
+    margin: 0 600px 0px 40px;
+    float: left;
+}
+
+form {
+    float: left;
+    margin: 30px 50px;
+}
+
+label {
+    float: left;
+    width: 80px;
+    color: black;
+    font-size: 12px;
+    padding: 6px;
+}
+
+div#content section div#loginContent {
+    margin: 0 10px;
+}
+
+div#content section div {
+    margin: 10px;
+}
+
+#loginForm span {
+    color: red;
+    font-style: italic;
+    font-size: 10px;
+}
+
+input#btnOk {
+    position: relative;
+    left: 225px;
+}
+
+input {
+    color: black;
+}

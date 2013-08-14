@@ -1,0 +1,54 @@
+/* ---------- CONTENT ---------- */
+ div#content h2 {
+     float: left;
+     margin: 0 50px;
+     color: #272e76;
+ }
+ 
+ div#propertiesContent {
+     float: left;
+     margin: 20px 75px;
+ }
+ 
+ div#property {
+     float: left;
+     width: 315px;
+     margin: 5px;
+     border-radius: 10px;
+     background-color: #13a7e9;
+     font-size: 12px;
+     height: 170px;
+ }
+ 
+ div#property h3 {
+     float: left;
+     margin: 10px;
+ }
+ 
+ div#property p#price {
+     float: right;
+     font-size: 14px;
+     font-weight: bold;
+     margin: 10px;
+ }
+ 
+ div#property img {
+     float: left;
+     margin: 10px;
+ }
+ 
+ div#property dl#specs {
+     float: left;
+     width: 130px;
+     margin: 20px 0;
+ }
+ 
+ dl#specs dt {
+     float: left;
+     width: 70px;
+     font-weight: bold;
+ }
+ 
+ dl#specs dd {
+     float: left;
+ }

@@ -1,0 +1,158 @@
+/* ---------- FILTER ---------- */
+div#filterForm {
+    width: 660px;
+    margin: auto;
+    background-color: #13a7e9;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+div#searchform {
+    float: left;
+}
+
+div#searchform div {
+    width: 210px;
+    float: left;
+    margin-right: 110px;
+    padding-top: 10px;
+}
+
+div#searchform_Type {
+    width: 100px;
+}
+
+div#searchform_Type input {
+    float: left;
+}
+
+div#searchform_Type label {
+    float: left;
+    width: 80px;
+}
+
+div#searchform_KopenHuren input {
+    margin-bottom: 9px;
+}
+
+div#searchform_KopenHuren label.required {
+    font-weight: normal;
+}
+
+input#btnOk {
+    float: right;
+    margin-right: 164px;
+    margin-top: 10px;
+}
+
+label.required {
+    font-weight: bold;
+}
+
+/* ---------- RECENT ---------- */
+div#recent {
+    width: 720px;
+    margin: auto;
+}
+
+div#recent h2 {
+    margin: 20px;
+}
+
+div#recent div {
+    width: 159px;
+    background-color: #13a7e9;
+    border-radius: 15px;
+    margin: 10px;
+    float: left;
+    height: 260px;
+}
+
+div#recent h3 {
+    padding: 10px;
+    font-size: 12px;
+}
+
+div#recent div img {
+    width: 149px;
+    margin: 5px 5px 0 5px;
+}
+
+p#price {
+    color: #272e76;
+    font-weight: bold;
+    float: right;
+    margin: 5px 10px;
+}
+
+dl#specs {
+    float: left;
+    margin: 10px;
+}
+
+dl#specs dt{
+    float: left;
+    width: 60px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+dl#specs dd {
+    float: left;
+    width: 60px;
+    font-size: 12px;
+}
+
+ /* ---------- RESULTS ---------- */
+ div#results h2 {
+     float: left;
+     margin: 0 500px 20px -10px;
+ }
+ 
+ div#results {
+     float: left;
+     margin: 20px 75px;
+ }
+ 
+ div#property {
+     float: left;
+     width: 315px;
+     margin: 5px;
+     border-radius: 10px;
+     background-color: #13a7e9;
+     font-size: 12px;
+     height: 170px;
+ }
+ 
+ div#property h3 {
+     float: left;
+     margin: 10px;
+ }
+ 
+ div#property p#price {
+     float: right;
+     font-size: 14px;
+     font-weight: bold;
+     margin: 10px;
+ }
+ 
+ div#property img {
+     float: left;
+     margin: 10px;
+ }
+ 
+ div#property dl#list {
+     float: left;
+     width: 130px;
+     margin: 20px 0;
+ }
+ 
+ dl#list dt {
+     float: left;
+     width: 70px;
+     font-weight: bold;
+ }
+ 
+ dl#list dd {
+     float: left;
+ }

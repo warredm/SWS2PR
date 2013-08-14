@@ -1,0 +1,119 @@
+/* ---------- CONTENT ---------- */
+ div#content h2 {
+     float: left;
+     margin: 0 50px;
+     color: #272e76;
+ }
+ 
+ div#propertiesContent {
+     float: left;
+     margin: 20px 75px;
+ }
+
+ div#detailContent {
+     padding: 20px;
+     margin-bottom: 20px;
+     border-radius: 15px;
+     background-color: #13a7e9;
+ }
+ 
+ div#detailContent h3 {
+     color: white;
+     float: left;
+ }
+ 
+ a#edit {
+     float: right;
+ }
+ 
+ div#details {
+     float: left;
+     width: 610px;
+     margin: 15px 0;
+ }
+ 
+ div#details dl dt{
+     float: left;
+     width: 150px;
+     margin: 5px 0;
+     font-weight: bold;
+ }
+ 
+ div#details dl dd {
+     float: left;
+     width: 150px;
+     margin: 5px 0;
+ }
+ 
+ div#description {
+     float: left;
+     width: 600px;
+     margin: 10px 0;
+ }
+ 
+ div#description p {
+     margin-top: 10px;
+     font-size: 12px;
+ }
+ 
+ a#edit {
+    display: block;
+    width: 30px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: transparent url(../img/edit.png) no-repeat 0 0;
+    height: 30px;
+ }
+ 
+ a#edit:hover {
+    background: transparent url(../img/editHover.png) no-repeat 0 0;
+ }
+ 
+ div#links {
+    float: right;
+    margin-right: 50px;
+ }
+ 
+ a#add {
+    display: block;
+    width: 30px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: transparent url(../img/add.png) no-repeat 0 0;
+    height: 30px;
+    float: right;
+ }
+ 
+ a#add:hover {
+    background: transparent url(../img/addHover.png) no-repeat 0 0;
+ }
+ 
+ a#back {
+    display: block;
+    width: 30px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: transparent url(../img/back.png) no-repeat 0 0;
+    height: 30px;
+    float: right;
+    margin: 0 5px 0 0;
+ }
+ 
+ a#back:hover {
+    background: transparent url(../img/backHover.png) no-repeat 0 0;
+ }
+ 
+ a#delete {
+    display: block;
+    width: 30px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: transparent url(../img/trash.png) no-repeat 0 0;
+    height: 30px;
+    float: right;
+    margin: 0 5px 0 0;
+ }
+ 
+ a#delete:hover {
+    background: transparent url(../img/trashHover.png) no-repeat 0 0;
+ }

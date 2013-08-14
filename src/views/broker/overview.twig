@@ -1,0 +1,94 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'Struttura Properties' %}
+
+{# set the css file in the parent tpl #}
+{% set cssFile = 'brokerOverview' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+        <div id="links">
+            <a href="{{ app.request.baseUrl }}/broker/add" id="add">Add</a>
+            <a href="{{ app.request.baseUrl }}/broker/" id="back">Back</a>
+        </div>
+        <div id="propertiesContent" class="clearfix">
+            {% if properties %}
+                    {% for property in properties %}
+                    <div id="detailContent" class="clearfix">
+                        <h3>
+                        {{ property.type }}
+                        {% if property.buyRent == "buy" %}
+                            te koop
+                        {% else %}
+                            te huur
+                        {% endif %}
+                        {{ property.city }} ({{ property.zip_code }})
+                        </h3>
+                        <a href="{{ app.request.baseUrl }}/broker/edit/{{ property.properties_id }}" id="edit" >edit</a>
+                        <a href="{{ app.request.baseUrl }}/broker/delete/{{ property.properties_id }}" id="delete">Delete</a>
+
+                        <div id="specs" class="clearfix">
+                            <div id="details">
+                                <dl class="clearfix">
+                                    <dt>Prijs</dt>
+                                    <dd>&euro; {{ property.price }}</dd>
+                                    <dt>Adres</dt>
+                                    <dd>{{ property.street }} {{ property.number }}</dd>
+                                    <dt>Gemeente</dt>
+                                    <dd>{{ property.zip_code }} {{ property.city }}</dd>
+                                    <dt>Provincie</dt>
+                                    <dd>{{ property.province }}</dd>
+                                    <dt>KI</dt>
+                                    <dd>
+                                        {% if property.KI == null %}
+                                            -
+                                        {% else %}
+                                            &euro; {{ property.KI }}
+                                        {% endif %}
+                                    </dd>
+                                    <dt>Toegevoegd op</dt>
+                                    <dd>{{ property.date }}</dd>
+                                    <dt>Oppervlakte</dt>
+                                    <dd>{{ property.acreage }} m²</dd>
+                                    <dt>Slaapkamers</dt>
+                                    <dd>
+                                        {% if property.bedrooms == null %}
+                                            -
+                                        {% else %}
+                                            {{ property.bedrooms }}
+                                        {% endif %}
+                                    </dd>
+                                    <dt>Badkamers</dt>
+                                    <dd>
+                                        {% if property.restrooms == null %}
+                                            -
+                                        {% else %}
+                                            {{ property.restrooms }}
+                                        {% endif %}
+                                    </dd>
+                                    <dt>Bouwjaar</dt>
+                                    <dd>
+                                        {% if property.bouwjaar == null %}
+                                            -
+                                        {% else %}
+                                            {{ property.bouwjaar }}
+                                        {% endif %}
+                                    </dd>
+                                </dl>
+                            </div>
+                                
+                            <div id="description">
+                                <h4>Omschrijving</h4>
+                                <p>{{ property.omschrijving }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+            {% else %}
+            <p>No properties to show!</p>
+            {% endif %}
+        </div>
+{% endblock %}

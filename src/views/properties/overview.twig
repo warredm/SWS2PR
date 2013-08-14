@@ -1,0 +1,43 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'Struttura Properties' %}
+
+{# set the css file in the parent tpl #}
+{% set cssFile = 'overview' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+        <div id="propertiesContent" class="clearfix">
+            {% if properties %}
+                {% for property in properties %}
+                <div id="property">
+                    <h3><a href="{{ app.request.baseUrl }}/properties/{{ property.properties_id }}">
+                    {{ property.type }}
+                        {% if property.buyRent == "buy" %}
+                             te koop
+                        {% else %}
+                             te huur
+                        {% endif %}
+                    </a></h3>
+                    <p id="price">&euro; {{ property.price }}</p>
+                    <img src="../../resources/pictures/{{ property.pictures }}/1.jpg" />
+                    <dl id="specs">
+                        <dt id="location">Locatie: </dt>
+                        <dd>{{ property.city }}</dd>
+                        <dt id="year">Bouwjaar: </dt>
+                        <dd>{{ property.bouwjaar }}</dd>
+                        <dt id="acreage">Opp.: </dt>
+                        <dd>{{ property.acreage }} m²</dd>
+                        <dt id="bedroooms">Slpk: </dt>
+                        <dd>{{ property.bedrooms }}</dd>
+                    </dl>
+                </div>
+                {% endfor %}
+            {% else %}
+            <p>No properties to show!</p>
+            {% endif %}
+        </div>
+{% endblock %}

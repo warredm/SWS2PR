@@ -1,0 +1,22 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'Struttura Properties' %}
+
+{# set the css file in the parent tpl #}
+{% set cssFile = 'login' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+        <div id="loginContent">
+            <h2>Login</h2>
+		
+            <form action="{#{{ app.request.baseUrl }}/broker/overview#}" method="post" {{ form_enctype(loginform) }} novalidate="novalidate">{# disable HTML5 formchecking #}
+                    {{ form_errors(loginform) }}
+                    {{ form_widget(loginform) }}
+                    <input type="submit" id="btnOk" name="submit" value="Login"/>
+            </form>
+        </div>
+{% endblock %}

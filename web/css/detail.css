@@ -1,0 +1,88 @@
+div#detailContent {
+    width: 600px;
+    margin: auto;
+}
+
+div#detailContent h3 {
+    float: left;
+    margin: 10px;
+}
+
+div#detailContent p#price {
+    float: right;
+    margin: 10px;
+    color: #272e76;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div#specs {
+    margin-bottom: 20px;
+}
+
+div#specs img {
+    width: 287px;
+    margin: 5px;
+}
+
+div#specs a {
+    float: right;
+}
+
+div#specs div {
+    width: 550px;
+    margin: auto;
+    padding: 15px;
+    border-bottom: 2px solid #DDD;
+}
+
+div#specs div p {
+    margin: 0 10px;
+}
+
+div#details dl {
+    padding: 15px 225px 15px 25px;
+    width: 300px;
+    font-size: 14px;
+}
+
+div#details dl dt {
+    float: left;
+    width: 140px;
+    padding: 2px;
+    margin: 2px 0;
+    background-color: #EEE;
+    font-weight: bold;
+}
+
+div#details dl dd {
+    float: left;
+    width: 140px;
+    padding: 2px;
+    margin: 2px 0;
+    background-color: #EEE;
+}
+
+div#images {
+    width: 400px;
+    margin: auto;
+}
+
+div#images img{
+    width: 400px;
+    margin: 5px 0;
+}
+
+a#contact {
+    margin: 10px;
+    background: transparent url(../img/contact.jpg) no-repeat 0 0;
+    height: 30px;
+    display: block;
+    width: 30px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+a#contact:hover {
+    background: transparent url(../img/contactHover.jpg) no-repeat 0 0;
+}

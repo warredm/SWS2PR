@@ -1,0 +1,99 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'Struttura' %}
+
+
+{# set the css file in the parent tpl #}
+{% set cssFile = 'detail' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+	{% if property %}
+        <div id="detailContent" class="clearfix">
+                <h3>
+                {{ property.type }}
+                {% if property.buyRent == "buy" %}
+                    te koop
+                {% else %}
+                    te huur
+                {% endif %}
+                {{ property.city }} ({{ property.zip_code }})
+                </h3>
+                <p id="price">&euro; {{ property.price }}</p>
+
+                <div id="specs" class="clearfix">
+                        <img src="{{ images.0 }}" class="mainPic" />
+                        <img src="{{ images.1 }}" class="mainPic" />
+                        <a href="{{ app.request.baseUrl }}/properties/contact/{{ property.properties_id }}/{{ property.brokers_id }}" id="contact">Contacteer makelaar</a>
+                        
+                        <div id="adress">
+                            <h4>Adres</h4>
+                            <p>{{ property.street }} {{ property.number }}</p>
+                            <p>{{ property.zip_code }} {{ property.city }}</p>
+                        </div>
+                        
+                        <div id="description">
+                            <h4>Omschrijving</h4>
+                            <p>{{ property.omschrijving }}</p>
+                        </div>
+                        
+                        <div id="details">
+                            <h4>Details</h4>
+                            <dl class="clearfix">
+                                <dt>Provincie</dt>
+                                <dd>{{ property.province }}</dd>
+                                <dt>KI</dt>
+                                <dd>
+                                    {% if property.KI == null %}
+                                        -
+                                    {% else %}
+                                        &euro; {{ property.KI }}
+                                    {% endif %}
+                                </dd>
+                                <dt>Toegevoegd op</dt>
+                                <dd>{{ property.date }}</dd>
+                                <dt>Oppervlakte</dt>
+                                <dd>{{ property.acreage }} m²</dd>
+                                <dt>Slaapkamers</dt>
+                                <dd>
+                                    {% if property.bedrooms == null %}
+                                        -
+                                    {% else %}
+                                        {{ property.bedrooms }}
+                                    {% endif %}
+                                </dd>
+                                <dt>Badkamers</dt>
+                                <dd>
+                                    {% if property.restrooms == null %}
+                                        -
+                                    {% else %}
+                                        {{ property.restrooms }}
+                                    {% endif %}
+                                </dd>
+                                <dt>Bouwjaar</dt>
+                                <dd>
+                                    {% if property.bouwjaar == null %}
+                                        -
+                                    {% else %}
+                                        {{ property.bouwjaar }}
+                                    {% endif %}
+                                </dd>
+                            </dl>
+                        </div>
+                </div>
+
+                {% for image in images %}
+                <div id="images" class="clearfix">
+                        <img src="{{ image }}"/>
+
+                </div>
+                {% endfor %}
+        </div>
+	{% else %}
+	<p>Invalid Tweet!</p>
+	{% endif %}
+{% endblock %}
